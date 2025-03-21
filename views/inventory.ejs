@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= 'WEB322 App' %></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('header', { title: 'Inventory' }) %>
+  <main>
+  <div class="container mt-4">
+    <h1>Product Inventory</h1>
+    <% if (products && products.length > 0) { %>
+      <div class="row">
+        <% products.forEach(product => { %>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><%= product.name %></h5>
+                <p class="card-text"><%= product.description %></p>
+                <p class="card-text"><strong>Price:</strong> $<%= product.price.toFixed(2) %></p>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    <% } else { %>
+      <p>No products available in the inventory.</p>
+    <% } %>
+  </div>
+</main>
+<%- include('footer') %>
+<script src="/assets/lib/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>

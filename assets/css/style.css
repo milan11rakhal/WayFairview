@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* yo main grid ko lagi */
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex-grow: 1;
+}
+
+
+nav .navbar-brand img{
+    width: 80px;
+}
+
+.hero {
+    padding: 100px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+.btn-primary {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
